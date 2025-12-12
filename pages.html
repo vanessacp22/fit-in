@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>classes</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="fit.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">FIT IN SF</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+          </ul>
+          <span class="navbar-text">COHORT 33</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <h1>FIT IN SF</h1>
+        <p>Get fit, not broke — Bay Area style.</p>
+
+        <a href="index.html" class="liquid-glass-btn">Fit In</a>
+      </div>
+    </section>
+
+    <section class="filter-bar">
+      <div class="filter-shell">
+        <select class="filter-pill" id="filter-type">
+          <option value="all">All Types</option>
+          <option value="Pilates">Pilates</option>
+          <option value="Yoga">Yoga</option>
+          <option value="HIIT">HIIT</option>
+        </select>
+
+        <select class="filter-pill" id="filter-promo">
+          <option value="all">All Offers</option>
+          <option value="Free">Free First Class</option>
+          <option value="Under">Under $20</option>
+        </select>
+        <select id="filter-intensity" class="filter-pill">
+          <option value="all">All Intensities</option>
+          <option value="High Intensity">High Intensity</option>
+          <option value="Moderate">Moderate</option>
+          <option value="Low Impact">Low Impact</option>
+        </select>
+
+        <input
+          type="text"
+          id="filter-search"
+          class="filter-search"
+          placeholder="Search studios…"
+        />
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section class="results-section">
+      <div class="results-shell">
+        <div class="results-header">
+          <h3>Studios</h3>
+          <span id="results-count">Curated for SF</span>
+        </div>
+
+        <!-- Airtable cards inject here -->
+        <div
+          class="row row-cols-1 row-cols-md-3 g-4"
+          id="cards-container"
+        ></div>
+      </div>
+    </section>
+
+    <section class="easter-egg">
+      <p>Oh — you’re still here.</p>
+      <div class="gif-box">
+        <img
+          src="DarkPinkandWhiteNeonAnimatedComingSoonVideo-ezgif.com-resize.gif"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
