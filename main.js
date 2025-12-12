@@ -84,21 +84,17 @@ function renderStudios(records) {
     `;
 
     card.onclick = () => {
-      window.location.href = `detail.html?id=${rec.id}`;
+      window.location.href = `details.html?id=${rec.id}`;
     };
 
     container.appendChild(card);
 
-    // Fade in (staggered)
     setTimeout(() => {
       card.classList.add("is-visible");
     }, index * 60);
   });
 }
 
-/* ===============================
-   FILTER LOGIC
-================================ */
 function applyFilters() {
   const type = document.getElementById("filter-type").value;
   const promo = document.getElementById("filter-promo").value.toLowerCase();
@@ -128,9 +124,6 @@ function applyFilters() {
   renderStudios(filtered);
 }
 
-/* ===============================
-   INIT
-================================ */
 (async () => {
   ALL_STUDIOS = await fetchStudios();
   renderStudios(ALL_STUDIOS);
